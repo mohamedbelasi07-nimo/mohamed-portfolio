@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  
+</head>
+<body>
+  <h1>Home</h1>
+  <a href="links.html">Open the link examples</a>
+<script>
+// Deployment adapter: the answer's source retains the required root-relative paths.
+const exerciseRoot = new URL("./", location.href).pathname;
+for (const element of document.querySelectorAll('[href^="/"]')) {
+  element.setAttribute('href', exerciseRoot + element.getAttribute('href').slice(1));
+}
+</script>
+</body>
+</html>

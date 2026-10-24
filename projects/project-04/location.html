@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Location Properties</title>
+  
+</head>
+<body>
+  <h1>Location Properties</h1>
+  <p id="href"></p>
+  <p id="protocol"></p>
+  <p id="host"></p>
+  <p id="pathname"></p>
+  <p id="search"></p>
+  <p id="hash"></p>
+  <script>
+    const properties = [
+      "href", "protocol", "host", "pathname", "search", "hash"
+    ];
+    for (const property of properties) {
+      document.getElementById(property).textContent =
+        `location.${property} = ${window.location[property]}`;
+    }
+  </script>
+</body>
+</html>

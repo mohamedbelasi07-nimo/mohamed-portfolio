@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request Builder</title>
+  
+</head>
+<body>
+  <h1>HTTP Request Builder</h1>
+  <fieldset>
+    <legend>Method</legend>
+    <button type="button" data-method="GET" aria-pressed="true">GET</button>
+    <button type="button" data-method="POST" aria-pressed="false">POST</button>
+  </fieldset>
+  <fieldset>
+    <legend>Path</legend>
+    <button type="button" data-path="/" aria-pressed="true">/</button>
+    <button type="button" data-path="/news" aria-pressed="false">/news</button>
+    <button type="button" data-path="/contact" aria-pressed="false">
+      /contact
+    </button>
+  </fieldset>
+  <h2>Request</h2>
+  <pre id="output" aria-live="polite"></pre>
+  <script>
+    let method = "GET";
+    let path = "/";
+    const output = document.getElementById("output");
+    const methods = document.querySelectorAll("[data-method]");
+    const paths = document.querySelectorAll("[data-path]");
+
+    function render() {
+      const body = "name=Ahmed";
+      let message = `${method} ${path} HTTP/1.1\r\n`;
+      message += `Host: ${location.host}\r\n`;
+      if (method === "POST") {
+        const size = new TextEncoder().encode(body).length;
+        message += "Content-Type: application/x-www-form-urlencoded\r\n";
+        message += `Content-Length: ${size}\r\n`;
+      }
+      message += "\r\n";
+      if (method === "POST") message += body;
+      output.textContent = message;
+      for (const button of methods) {
+        button.setAttribute("aria-pressed",
+          String(button.dataset.method === method));
+      }
+      for (const button of paths) {
+        button.setAttribute("aria-pressed",
+          String(button.dataset.path === path));
+      }
+    }
+
+    for (const button of methods) {
+      button.addEventListener("click", () => {
+        method = button.dataset.method;
+        render();
+      });
+    }
+    for (const button of paths) {
+      button.addEventListener("click", () => {
+        path = button.dataset.path;
+        render();
+      });
+    }
+    render();
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weekly Timetable</title>
+  <style>
+    table { border-collapse: collapse; }
+    th, td { border: 1px solid #555; padding: .5rem; }
+  </style>
+</head>
+<body>
+  <h1>Weekly Timetable</h1>
+  <table>
+    <caption>Classes: Sunday to Thursday, 09:00-12:00</caption>
+    <thead>
+      <tr>
+        <th scope="col">Day</th>
+        <th scope="col">Time</th>
+        <th scope="col">Room 1</th>
+        <th scope="col">Room 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="rowgroup" rowspan="3">Sunday</th>
+        <th scope="row">09:00-10:00</th>
+        <td rowspan="2">HTML Lab (09:00-11:00)</td>
+        <td>Mathematics</td>
+      </tr>
+      <tr>
+        <th scope="row">10:00-11:00</th><td>English</td>
+      </tr>
+      <tr>
+        <th scope="row">11:00-12:00</th>
+        <td>Study</td><td>Physics</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <th scope="row">Monday</th>
+        <td colspan="3">Public holiday - no classes all day</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <th scope="rowgroup" rowspan="3">Tuesday</th>
+        <th scope="row">09:00-10:00</th><td>CSS</td><td>English</td>
+      </tr>
+      <tr>
+        <th scope="row">10:00-11:00</th><td>Math</td><td>Study</td>
+      </tr>
+      <tr>
+        <th scope="row">11:00-12:00</th><td>Physics</td><td>HTML</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <th scope="rowgroup" rowspan="3">Wednesday</th>
+        <th scope="row">09:00-10:00</th><td>HTML</td><td>Math</td>
+      </tr>
+      <tr>
+        <th scope="row">10:00-11:00</th><td>Study</td><td>CSS</td>
+      </tr>
+      <tr>
+        <th scope="row">11:00-12:00</th><td>English</td><td>Physics</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <th scope="rowgroup" rowspan="3">Thursday</th>
+        <th scope="row">09:00-10:00</th><td>Math</td><td>HTML</td>
+      </tr>
+      <tr>
+        <th scope="row">10:00-11:00</th><td>CSS</td><td>English</td>
+      </tr>
+      <tr>
+        <th scope="row">11:00-12:00</th><td>Study</td><td>Physics</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

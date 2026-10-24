@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTTP Messages</title>
+  <link rel="stylesheet" href="messages.css">
+</head>
+<body>
+  <h1>HTTP Messages</h1>
+  <h2>Request</h2>
+  <pre><span class="start-line">POST /submit HTTP/1.1</span>
+<span class="headers">Host: example.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 10</span>
+
+<span class="message-body">name=Ahmed</span></pre>
+
+  <h2>Response</h2>
+  <pre><span class="start-line">HTTP/1.1 200 OK</span>
+<span class="headers">Content-Type: text/html; charset=UTF-8
+Content-Length: 16</span>
+
+<span class="message-body">&lt;p&gt;Received!&lt;/p&gt;</span></pre>
+</body>
+</html>

@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: #17202a;
+  font: 1rem/1.6 Arial, sans-serif;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  background: #eaf0f7;
+}
+main { max-width: 60rem; margin: auto; padding: 1rem; }
+a { color: #153e75; }
+a:focus-visible { outline: 3px solid #17202a; outline-offset: 4px; }

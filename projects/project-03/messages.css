@@ -1,0 +1,5 @@
+body { font-family: Arial, sans-serif; margin: 2rem; }
+pre { padding: 1rem; background: #f2f4f7; overflow-x: auto; }
+.start-line { color: #7a1f1f; font-weight: bold; }
+.headers { color: #153e75; }
+.message-body { color: #205c32; }

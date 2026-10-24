@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Lecture</title>
+  <style>video { max-width: 100%; height: auto; }</style>
+</head>
+<body>
+  <h1>Introduction to HTML</h1>
+  <video controls preload="metadata" width="640" height="360"
+    poster="media/poster.png">
+    <source src="media/lecture.webm" type="video/webm">
+    <source src="media/lecture.mp4" type="video/mp4">
+    <track kind="captions" src="captions.vtt"
+      srclang="en" label="English" default>
+    <p>Your browser cannot play this video.
+      <a href="media/lecture.mp4" download>Download the lecture</a>.</p>
+  </video>
+  <p><a href="media/lecture.mp4" download>Download the MP4 lecture</a></p>
+  <section>
+    <h2>Transcript</h2>
+    <h3>Introduction</h3>
+    <p>Welcome to this introduction to HTML.</p>
+    <h3>Document Structure</h3>
+    <p>HTML describes the structure of a web document.</p>
+  </section>
+</body>
+</html>
